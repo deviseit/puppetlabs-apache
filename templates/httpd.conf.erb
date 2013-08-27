@@ -41,6 +41,7 @@ Include <%= @mod_load_dir %>/*.conf
 <% end -%>
 Include <%= @ports_file %>
 
+LogFormat "%v:%p %h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\" %T \"%D\" \"%>D\"" vhost_combined_ext
 LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
 LogFormat "%h %l %u %t \"%r\" %>s %b" common
 LogFormat "%{Referer}i -> %U" referer
